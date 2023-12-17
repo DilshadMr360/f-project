@@ -34,10 +34,10 @@ const Main = () => {
                     loop
                 ></video>
                 <div className=' bg-white py-4 px-4 bg-opacity-20 md:h-[400px]  font-nunito  flex flex-col justify-center items-center align-middle text-center gap-10 '>
-                    <h3 className="md:text-5xl text-3xl text-white  bg-amber-500 bg-opacity-80 py-6 px-6 rounded-lg font-nunito">Predict The Price Of The House You Deserve </h3>
+                    <h3 className="md:text-5xl text-3xl text-white  bg-amber-500 bg-opacity-80 py-6 px-6 rounded-lg font-nunito">Predict The Price of The House You Deserve </h3>
                     <button className='w-60 font-nunito   bg-amber-700 hover:bg-amber-900 text-white text-4xl py-4 px-4 mt-2 rounded-lg'>
                         <Link to="/">
-                            Login
+                            Sign In
                         </Link>
                     </button>
 
