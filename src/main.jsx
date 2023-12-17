@@ -1,4 +1,10 @@
 import React, { useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap" rel="stylesheet"></link>
+
+</head>
 
 const Main = () => {
     const videoRef = useRef(null);
@@ -15,20 +21,30 @@ const Main = () => {
     }, []);
 
     return (
-        <div className='h-screen relative'>
-        <section className='relative'>
-            <div className='absolute '>
-                <video ref={videoRef} src={process.env.PUBLIC_URL + '/assets/menu2.mp4'} muted loop></video>
-                <div className='bg-black bg-opacity-60 text-center items-center py-4 px-4 absolute bottom-[550px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white rounded-lg '>
-                    <h3 className=' text-5xl  text-white'>Predict The Price Of The House You Deserve </h3>
+
+
+
+        <div className='relative h-screen'>
+            <section className="flex flex-col items-center justify-center h-full relative z-10 ">
+                <video
+                    className="absolute left-0 right-0 w-full h-full object-cover z-[-1]"
+                    ref={videoRef}
+                    src={process.env.PUBLIC_URL + '/assets/menu2.mp4'}
+                    muted
+                    loop
+                ></video>
+                <div className=' bg-white py-4 px-4 bg-opacity-20 md:h-[400px]  font-nunito  flex flex-col justify-center items-center align-middle text-center gap-10 '>
+                    <h3 className="md:text-5xl text-3xl text-white  bg-amber-500 bg-opacity-80 py-6 px-6 rounded-lg font-nunito">Predict The Price Of The House You Deserve </h3>
+                    <button className='w-60 font-nunito   bg-amber-700 hover:bg-amber-900 text-white text-4xl py-4 px-4 mt-2 rounded-lg'>
+                        <Link to="/">
+                            Login
+                        </Link>
+                    </button>
+
                 </div>
-                <div className='op absolute top-[500px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white'>
-                    <button className='w-40 bg-blue-500 text-white text-4xl py-4 px-4 mt-2 rounded-lg'>Login</button>
-                </div>
-            </div>
-        </section>
-    </div>
-    
+            </section>
+        </div>
+
     );
 };
 
