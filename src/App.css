@@ -1,6 +1,23 @@
 .font-nunito {
-  font-family: nunito, sans-serif;
+  font-family: 'Nunito', sans-serif;
 }
+
+.font-roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+.font-Montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.font-raleway {
+  font-family: 'Raleway', sans-serif;
+}
+
+.font-kanit {
+  font-family: 'Kanit', sans-serif;
+}
+
 
 .App {
   text-align: center;
@@ -10,6 +27,8 @@
   height: 40vmin;
   pointer-events: none;
 }
+
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
