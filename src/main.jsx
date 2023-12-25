@@ -30,8 +30,8 @@ const Main = () => {
             Predict The Price of The House You Deserve
           </h3>
 
-          <button  className="w-60 font-kanit bg-sky-600 hover:bg-sky-400 text-white text-4xl py-4 px-4 mt-2 rounded-lg font-light  ">
-            <Link to="/">Sign In</Link>
+          <button  className="w-60 font-kanit bg-sky-600 hover:bg-sky-400 text-white text-3xl py-4 px-4 mt-2 rounded-2xl font-light  ">
+            <Link to="/home">Find A Home</Link>
           </button>
         </div>
       </section>
