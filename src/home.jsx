@@ -1,10 +1,39 @@
-import React from 'react'
-
-
+import React, { useState } from 'react'
+import Checkbox from '@mui/material/Checkbox';
+import FormControlLabel from '@mui/material/FormControlLabel';
 import 'react-dropdown/style.css';
 
 
 const Home = () => {
+    const label = { label: 'Your Label' };
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+
+
+    const openModal = () => {
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+    };
+
+    const handleOverlayClick = (e) => {
+        if (e.target === e.currentTarget) {
+            closeModal();
+        }
+    };
+
+    // const CustomCheckbox = ({ label, ...props }) => (
+    //     <div>
+    //       <Checkbox {...props} />
+    //       <label>{label}</label>
+    //     </div>
+    //   );
+
+
+
+
     return (
         <div className='mx-10'>
             <div className='w-full py-5  md:flex '>
@@ -39,21 +68,26 @@ const Home = () => {
                 </div>
 
 
+
+
+
+
+
                 <div className=' w-8/12'>
                     <div className='flex flex-col'>
 
 
-{/* Filter part */}
+                        {/* Filter part */}
 
 
-                    <div className=' flex  gap-2 px-4 py-4 rounded-lg'>
-                        <img
-                            className="w-5 h-5 items-start"
-                            src="/assets/filter.png"
-                            alt=""
-                        />
-                        <h1>Filters</h1>
-                    </div>
+                        <div className=' flex  gap-2 px-4 py-4 rounded-lg'>
+                            <img
+                                className="w-5 h-5 items-start"
+                                src="/assets/filter.png"
+                                alt=""
+                            />
+                            <h1>Filters</h1>
+                        </div>
                         <div className='flex'>
                             {/* dropdown */}
                             <div className='mx-5 mt-4 overflow-y-auto border'>
@@ -86,6 +120,23 @@ const Home = () => {
                             </div>
 
                             {/* dropdown */}
+
+                            {/* dropdown */}
+                            <div className='mx-5 mt-4 overflow-y-auto border'>
+                                <select class="ui search dropdown w-40">
+                                    <option value="">Rooms</option>
+                                    <option value="AL">1</option>
+                                    <option value="AK">2</option>
+                                    <option value="AZ">3</option>
+                                    <option value="AR">4</option>
+
+
+
+                                </select>
+                            </div>
+
+                            {/* dropdown */}
+
                         </div>
 
                         <div className='flex'>
@@ -137,9 +188,89 @@ const Home = () => {
                         </div>
 
                     </div>
-                    <div className=' bg-green-500 flex w-40 h-12 rounded-md item-center justify-center  mt-2 mx-5'>
-                        <button className=' text-white font-bold text-center'>Predict the Price</button>
+                    <div className='flex items-center mt-5'>
+
+                        <div className=' bg-green-500 flex w-40 h-12 rounded-md item-center justify-center  mt-2 mx-5'>
+                            <button className=' text-white font-bold text-center'>Predict the Price</button>
+                        </div>
+                        <label htmlFor="" className='bg-white w-40 h-11 text-center justify-center flex items-center'>
+                            Rs ?
+                        </label>
+                        <div className=' bg-green-500 flex w-60 h-12 rounded-md item-center justify-center  mt-2 mx-5'>
+                            <button onClick={openModal} className=' text-white font-bold text-center'>Predict Monthly Expenses</button>
+                        </div>
+
+
                     </div>
+
+                    {/* Modal */}
+                    {/* {isModalOpen && (
+    <div className='fixed inset-0 flex items-center justify-center' onClick={handleOverlayClick}>
+        <div className='absolute bg-white p-5 rounded-md'>
+            <p>Hello</p>
+            <button onClick={closeModal}>Close</button>
+        </div>
+    </div>
+)} */}
+
+                    {/* Modal */}
+                    {isModalOpen && (
+                        <div className='fixed inset-0 flex items-center justify-center'>
+                            {/* Semi-transparent black background */}
+                            <div className='absolute inset-0 bg-black opacity-50'></div>
+
+                            {/* Modal content */}
+                            <div className='absolute bg-white p-5 rounded-md border-4 w-8/12'>
+                                {/* <CustomCheckbox label="Checkbox 1" defaultChecked /> */}
+                                {/* <CustomCheckbox label="Checkbox 2" /> */}
+                                {/* <CustomCheckbox label="Checkbox 3 (Disabled)" disabled /> */}
+                                {/* <CustomCheckbox label="Checkbox 4 (Disabled Checked)" disabled checked /> */}
+                                <div className=''>
+                                    <div className='flex justify-end '>
+                                        <button c onClick={closeModal}>Close</button>
+
+                                    </div>
+
+                                    <div>
+                                        <h1 className=' text-xl'>Select Appliances for Monthly Expense Estimate </h1>
+                                    </div>
+
+                                    <div className='flex justify-between mt-5'>
+                                        <FormControlLabel control={<Checkbox {...label} />} label="Air Conditioner" className=' w-48' />
+                                        <FormControlLabel control={<Checkbox {...label} />} label="Fan" className=' w-48' />
+                                        <FormControlLabel control={<Checkbox {...label} />} label="Refrigarator" className=' w-48' />
+                                        <FormControlLabel control={<Checkbox {...label} />} label="Television" className=' w-48' />
+                                        <FormControlLabel control={<Checkbox {...label} />} label="CCTV" className=' w-48' />
+                                    </div>
+                                    <div className='flex justify-between'>
+
+
+                                        <FormControlLabel control={<Checkbox {...label} />} label="Micorawan" className=' w-48' />
+                                        <FormControlLabel control={<Checkbox {...label} />} label="LED Lights" className=' w-48' />
+                                        <FormControlLabel control={<Checkbox {...label} />} label="Water Heater" className=' w-48' />
+                                        <FormControlLabel control={<Checkbox {...label} />} label="Rice Cooker" className=' w-48' />
+                                        <FormControlLabel control={<Checkbox {...label} />} label="Laptop" className=' w-48' />
+                                    </div>
+
+                                    <div className='flex item-center justify-center mx-auto  gap-2 mt-5'>
+                                        <div className=' bg-green-500 flex w-60 h-12 rounded-md justify-center '>
+                                            <button onClick={openModal} className=' text-white font-bold text-center'>Predict Monthly Expenses</button>
+
+                                        </div>
+                                        <label htmlFor="" className=' w-40 h-12 text-center justify-center flex items-center bg-gray-200'>
+                                            Rs ?
+                                        </label>
+                                    </div>
+
+
+                                </div>
+
+                                {/* <FormControlLabel control={<Checkbox {...label} />} label="Unchecked" /> */}
+                                {/* <FormControlLabel control={<Checkbox {...label} disabled />} label="Disabled" /> */}
+                                {/* <FormControlLabel control={<Checkbox {...label} disabled checked />} label="Disabled Checked" /> */}
+                            </div>
+                        </div>
+                    )}
 
                 </div>
 
@@ -155,128 +286,6 @@ const Home = () => {
             <div className='w-full  md:flex flex-row mt-5 border-4'>
 
 
-                {/* Filter part */}
-                {/* <div className='w-3/12'>
-
-
-                    <div className=' flex  gap-2 px-4 py-4 rounded-lg'>
-                        <img
-                            className="w-5 h-5 items-start"
-                            src="/assets/filter.png"
-                            alt=""
-                        />
-                        <h1>Filters</h1>
-                    </div>
-
-                    <div className=''> */}
-
-                        {/* dropdown */}
-                        {/* <div className='mx-5 mt-4 overflow-y-auto border'>
-                            <select class="ui search dropdown w-40">
-                                <option value="">District</option>
-                                <option value="AL">Colombo</option>
-                                <option value="AK">Gampaha</option>
-                                <option value="AZ">Kaluthara</option>
-                                <option value="AR">Mathara</option> */}
-                                {/* <option value="CA">Kandy</option>
-  <option value="CO">Puthalam</option>
-  <option value="CT">Jaffna</option>
-  <option value="DE">Polonnaruwa</option>
-  <option value="DC">Kurunagala</option>
-  <option value="DC">Batticaloa</option>
-  <option value="FL">Anuradhapura</option>
-  <option value="FL">Hambanthota</option>
-  <option value="FL">Ampara</option>
-  <option value="FL">Badulla</option>
-  <option value="FL">Kagalle</option>
-  <option value="FL">Kilinochi</option>
-  <option value="FL">Mannar</option>
-  <option value="FL">Nuwaraeliye</option>
-  <option value="FL">Mathale</option>
-  <option value="FL">Vavuniya</option>
-  <option value="FL">Thrincomalee</option>
-  <option value="FL">Rathnapura</option>
-  <option value="FL">Mulathiv</option>
-  <option value="FL">Monaragala</option> */}
-
-
-                            {/* </select>
-                        </div> */}
-
-                        {/* dropdown */}
-
-
-                        {/* dropdown */}
-                        {/* <div className='mx-5 mt-4 overflow-y-auto border'>
-                            <select class="ui search dropdown w-40">
-                                <option value="">Rooms</option>
-                                <option value="AL">1</option>
-                                <option value="AK">2</option>
-                                <option value="AZ">3</option>
-                                <option value="AR">4</option>
-
-
-
-                            </select>
-                        </div> */}
-
-                        {/* dropdown */}
-
-                        {/* dropdown */}
-                        {/* <div className='mx-5 mt-4 overflow-y-auto border'>
-                            <select class="ui search dropdown w-40">
-                                <option value="">Bathrooms</option>
-                                <option value="AL">1</option>
-                                <option value="AK">2</option>
-                                <option value="AZ">3</option>
-
-
-
-                            </select>
-                        </div> */}
-
-                        {/* dropdown */}
-
-                        {/* dropdown */}
-                        {/* <div className='mx-5 mt-4 overflow-y-auto border'>
-                            <select class="ui search dropdown w-40">
-                                <option value="">Land Size</option>
-                                <option value="AL">1</option>
-                                <option value="AK">2</option>
-                                <option value="AZ">3</option>
-
-
-
-                            </select>
-                        </div> */}
-
-                        {/* dropdown */}
-
-                        {/* dropdown */}
-                        {/* <div className='mx-5 mt-4 overflow-y-auto border'>
-                            <select class="ui search dropdown w-40">
-                                <option value="">House Size</option>
-                                <option value="AL">1</option>
-                                <option value="AK">2</option>
-                                <option value="AZ">3</option>
-
-
-
-                            </select>
-                        </div> */}
-
-                        {/* dropdown */}
-                    {/* </div>
-
-                    <div className='mx-auto bg-green-500 flex w-40 h-12 rounded-md item-center justify-center text-center mt-5'>
-                        <button className=' text-white font-bold '>Predict the Price</button>
-                    </div> */}
-
-
-
-
-                {/* </div> */}
-                {/* Filter part */}
 
 
 
@@ -333,9 +342,9 @@ const Home = () => {
                     {/* image 2 end */}
 
 
-  {/* image 1  */}
+                    {/* image 1  */}
 
-  <div className=' bg-gray-100 py-2 px-2 rounded-2xl'>
+                    <div className=' bg-gray-100 py-2 px-2 rounded-2xl'>
                         <img
                             className="md:w-[450px] h-60 items-start border rounded-tl-3xl rounded-tr-3xl rounded-bl-md rounded-br-md"
                             src="/assets/login.jpg"
