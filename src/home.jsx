@@ -59,11 +59,11 @@ const Home = () => {
     return (
         <div className='mx-10'>
             <div className='w-full py-5  md:flex '>
-                <div className='w-3/12'>
-                    <h1 className='text-black font-bold text-3xl'>Home</h1>
+                <div className='md:w-3/12'>
+                    <h1 className='text-black font-bold text-3xl md:text-start text-center'>Home</h1>
                 </div>
 
-                <div className='w-6/12  flex justify-center bg-slate-200 gap-2 px-4 py-4 rounded-lg'>
+                <div className='md:w-6/12  flex justify-center bg-slate-200 gap-2 px-4 py-4 rounded-lg'>
                     <button className='rounded-2xl text-white font-bold bg-green-600 border text-sm px-4 py-2'>Predicted History</button>
                     <button className='rounded-2xl text-white font-bold bg-green-600 border text-sm  px-4 py-2'>My Wishlist</button>
                 </div>
@@ -81,16 +81,16 @@ const Home = () => {
                 <div className='flex'>
                     <input type="text"
                         placeholder='Search by location'
-                        className=' border rounded-md placeholder-black  bg-slate-200 px-2 py-2 text-center'
+                        className=' border rounded-md placeholder-black  bg-slate-200 md:px-2 md:py-2 text-center'
                     />
                 </div>
-                <div className='flex ml-auto items-end  '>
+                <div className='md:flex ml-auto items-end'>
 
-                <div className=' bg-green-500 flex w-40 h-12 rounded-md item-center justify-center  mx-5'>
+                <div className=' bg-green-500 flex w-40 h-12 rounded-md item-center justify-center  md:mx-5'>
                             <button onClick={openModal} className=' text-white font-bold text-center'> Electricity Expenses</button>
                         </div>
 
-                        <div className=' bg-green-500 flex w-40 h-12 rounded-md item-center justify-center '>
+                        <div className=' bg-green-500 flex w-40 h-12 rounded-md item-center justify-center md:mt-0 mt-2'>
                             <button onClick={openModal2} className=' text-white font-bold text-center'>  Waterbill Expenses </button>
                         </div>
                 </div>
@@ -104,12 +104,12 @@ const Home = () => {
 
             <div className='bg-slate-200 border-4 w-full md:flex  mt-5 py-2'>
 
-                <div className=' w-4/12  my-auto mx-5'>
+                <div className='md:w-4/12  my-auto mx-5 text-center justify-center '>
                     <h1 className='text-3xl'><span className='text-green-700 font-medium'>Predict</span> Your Dream House <span className='text-green-700 font-medium'>Price</span>  </h1>
                 </div>
 
 
-                <div className=' w-8/12'>
+                <div className=' md:w-8/12 md:mx-0 mx-10'>
                 <div className='flex flex-col'>
 
 {/* Filter part */}
@@ -122,11 +122,11 @@ const Home = () => {
     <h1 className="text-lg">Filters</h1>
 </div>
 
-<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4  items-center '>
 
     {/* Bed Rooms dropdown */}
-    <div className='mx-5 mt-4 overflow-y-auto border'>
-        <select className="ui search dropdown w-full">
+    <div className='mx-5 mt-4 overflow-y-auto '>
+        <select className="ui search dropdown w-full ">
             <option value="">Bed Rooms</option>
             <option value="AL">1</option>
             <option value="AK">2</option>
