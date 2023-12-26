@@ -4,6 +4,7 @@ import Login from './login';
 import Register from './register';
 import Main from './main';
 import Home from './home';
+import 'font-awesome/css/font-awesome.min.css';
 
 function App() {
   return (
