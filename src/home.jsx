@@ -71,28 +71,21 @@ const Home = () => {
 
 
             <div className=''>
-                <div className='flex '>
-                <h1 className='text-black font-bold w-8/12 '>2058 Results <span className='text-gray-400 '>in Sri Lanka</span></h1>
-                <h1 className='text-black font-bold w-4/12 text-center  mx-auto'>Predict Monthly Expenses </h1>
+                <div className='flex  items-end text-end'>
+                <h1 className='text-black font-bold mx-auto '>Predict Monthly Expenses </h1>
 
                 </div>
                 <div className='flex mt-2 '>
 
-                <div className='flex'>
-                    <input type="text"
-                        placeholder='Search by location'
-                        className=' border rounded-md placeholder-black  bg-slate-200 md:px-2 md:py-2 text-center'
-                    />
-                </div>
-                <div className='md:flex ml-auto items-end'>
+                <div className='md:flex mx-auto'>
 
-                <div className=' bg-green-500 flex w-40 h-12 rounded-md item-center justify-center  md:mx-5'>
+                <div className=' bg-green-500 flex w-40 h-12 rounded-md item-center justify-center  md:mx-5 '>
                             <button onClick={openModal} className=' text-white font-bold text-center'> Electricity Expenses</button>
                         </div>
 
-                        <div className=' bg-green-500 flex w-40 h-12 rounded-md item-center justify-center md:mt-0 mt-2'>
+                        {/* <div className=' bg-green-500 flex w-40 h-12 rounded-md item-center justify-center md:mt-0 mt-2'>
                             <button onClick={openModal2} className=' text-white font-bold text-center'>  Waterbill Expenses </button>
-                        </div>
+                        </div> */}
                 </div>
 
                 </div>
