@@ -136,10 +136,11 @@ const Home = () => {
     <div className='mx-5 mt-4 overflow-y-auto border'>
         <select className="ui search dropdown w-full">
             <option value="">Land Size</option>
-            <option value="AL">1</option>
-            <option value="AK">2</option>
-            <option value="AZ">3</option>
-            <option value="AR">4</option>
+            <option value="AL">50.0 perches</option>
+            <option value="AL">8.0 perches</option>
+            <option value="AL">22.0 perches</option>
+            <option value="AL">6.3 perches</option>
+
         </select>
     </div>
 
@@ -147,10 +148,10 @@ const Home = () => {
     <div className='mx-5 mt-4 overflow-y-auto border'>
         <select className="ui search dropdown w-full">
             <option value="">Location</option>
-            <option value="AL">Negombo, Gampaha</option>
-            <option value="AK">Kollupitiya, Gampaha</option>
-            <option value="AZ">Kadawatha,Gampaha</option>
-            <option value="AR"></option>
+            <option value="AL">Kollupitiya, Colombo</option>
+            <option value="AK">Wallawaththa, Colombo</option>
+            <option value="AZ">Rajagiriya,Colombo</option>
+            <option value="AZ">Rajagiriya,Colombo</option>
         </select>
     </div>
 
@@ -159,6 +160,17 @@ const Home = () => {
     <div className='mx-5 mt-4 overflow-y-auto border'>
         <select className="ui search dropdown w-full">
             <option value="">House Size</option>
+            <option value="AL">1,600,0 sqft</option>
+            <option value="AL">1,480,0 sqft</option>
+            <option value="AL">2,800,0 sqft</option>
+            <option value="AL">4,000,0 sqft</option>
+            <option value="AL">900,0 sqft</option> 
+        </select>
+    </div>
+
+    <div className='mx-5 mt-4 overflow-y-auto border'>
+        <select className="ui search dropdown w-full">
+            <option value="">Address</option>
             <option value="AL">1</option>
             <option value="AK">2</option>
             <option value="AZ">3</option>
@@ -166,16 +178,7 @@ const Home = () => {
         </select>
     </div>
 
-    {/* Location dropdown
-    <div className='mx-5 mt-4 overflow-y-auto border'>
-        <select className="ui search dropdown w-full">
-            <option value="">Location</option>
-            <option value="AL">1</option>
-            <option value="AK">2</option>
-            <option value="AZ">3</option>
-            <option value="AR">4</option>
-        </select>
-    </div> */}
+
 
 </div>
 </div>
@@ -317,10 +320,6 @@ const Home = () => {
       ) : (
         <FontAwesomeIcon icon={regularHeart} className='w-10 h-10 text-gray-300' />
       )}
-
-    
-
-    
 
     </div>
     
