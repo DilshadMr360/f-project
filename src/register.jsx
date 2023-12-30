@@ -7,7 +7,7 @@ const Register = () => {
       <section className="flex flex-col items-center justify-center h-full relative z-10 ">
         <img
           className="absolute left-0 right-0 w-full h-full object-cover z-[-1] "
-          src="/assets/login.jpg"
+          src="/assets/login_1.jpeg"
           alt=""
         />
 
