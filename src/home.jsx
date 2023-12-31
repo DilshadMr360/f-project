@@ -8,7 +8,7 @@ const Home = () => {
 
 
     return (
-        <div className=''>
+        <div>
 
 <div className="relative h-screen">
       <section className="flex flex-col items-center justify-center h-full relative z-10 ">
@@ -17,11 +17,15 @@ const Home = () => {
           src="/assets/prediction_2.jpg"
           alt=""
         />
+         
+         <div className=' mt-5'>
+          <h1 className='font-bold text-3xl text-teal-950'>Predicting the 'Time' to Design your Own Jewellery Idea</h1>
+          <h1 className='text-center font-bold mt-2'>Select the Following Details</h1>
+         </div>
 
-
-        <div className='bg-white  w-5/12 h-auto py-2 rounded'>
+        <div className='bg-white w-10/12  md:w-4/12 h-auto py-2 rounded mt-2'>
             <form action=" ">
-<div className='md:w-4/12 mx-auto'>
+<div className='md:w-6/12 w-8/12  mx-auto'>
 <label
                 htmlFor="email"
                 className="block mb-2 text-md  text-black font-bold "
@@ -146,7 +150,7 @@ Select Finish
 
 </div>
             
-  <div className='flex justify-center'>
+  <div className='flex justify-center mt-5'>
   <button  className="w-40 font-kanit bg-teal-700 hover:bg-teal-900 text-white text-xl py-2 px-2 mt-2 rounded-2xl font-light  ">
            Predict Time
           </button>
