@@ -100,59 +100,27 @@ const Home = () => {
                 htmlFor="email"
                 className="block mb-2 text-md  text-black font-bold "
               >
-           Net Weight
+           Gemstone Setting
               </label>
              
                        <select className="bg-gray-50 border border-gray-300 text-black font-bold sm:text-sm rounded-lg  block w-full p-2.5 placeholder-black">
-                                <option value="">2.59g</option>
-                                <option value="">1.813g</option>
-                                <option value="">2.551g</option>
-                                
-                          
-
-                            </select>
-
+                                <option value="">Yes</option>
+                                <option value="">No</option>
                             
-                            <label
-                htmlFor="email"
-                className="block mb-2 text-md  text-black font-bold "
-              >
-Select Finish
-              </label>
-             
-                       <select className="bg-gray-50 border border-gray-300 text-black font-bold sm:text-sm rounded-lg  block w-full p-2.5 placeholder-black">
-                                <option value="">Polished </option>
-                                <option value="">Matte </option>
-                                <option value="">Textured </option>
-                          
-
-
-
                             </select>
 
 
-                            <label
-                htmlFor="email"
-                className="block mb-2 text-md  text-black font-bold "
-              >
-           Select Texture
-              </label>
-             
-                       <select className="bg-gray-50 border border-gray-300 text-black font-bold sm:text-sm rounded-lg  block w-full p-2.5 placeholder-black">
-                                <option value="">Smooth </option>
-                                <option value="">Rough </option>
-                                <option value="">Engraved  Rings</option>
-                          
 
-
-
-                            </select>
+                           
 
 </div>
             
-  <div className='flex justify-center mt-5'>
+  <div className='flex justify-center mt-5 gap-2'>
   <button  className="w-40 font-kanit bg-teal-700 hover:bg-teal-900 text-white text-xl py-2 px-2 mt-2 rounded-2xl font-light  ">
            Predict Time
+          </button>
+          <button  className="w-40 font-kanit bg-teal-700 hover:bg-teal-900 text-white text-xl py-2 px-2 mt-2 rounded-2xl font-light  ">
+          Order Now
           </button>
   </div>
 
